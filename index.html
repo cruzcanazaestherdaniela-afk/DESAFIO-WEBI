@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    <h2>Sistema completo de registro</h2>
+
+<div class="card" id="registro"> <!-- Iniciamos el registro -->
+  <h3>REGISTRO</h3>
+  <!-- Creamos 3 input donde crearemos: Usuario, contraseña y telefono -->
+  <input type="text" id="regitro_usuario" placeholder="Usuario" /> <!-- id para que JS lo lea -->
+  <input type="password" id="registro_pass" placeholder="Contraseña" />
+  <input type="text" id="registro_celular" placeholder="Telefono" />
+  <label><input type="checkbox" id="verPassRegistro" />Mostrar contraseña</label><!-- Ocultar/Mostrar contraseña -->
+  <button onclick="registrar()">Registrar</button><!-- Ponemos una funcion llamada registrar() -->
+  <p class="msg" id="msg_registro"></p><!-- Indicara cuando halla un error o confirmacion -->
+</div>
+
+<div class="card" id="login"><!-- Iniciamos el Login -->
+  <h3>Login</h3>
+  <!-- Creamos 2 input: Usuario o telefono y contraseña ya establecida en el registro -->
+  <input type="text" id="login_usuario" placeholder="Usuario o celular" /><!-- id para que JS lo lea -->
+  <input type="password" id="login_pass" placeholder="Contraseña" />
+  <label><input type="checkbox" id="verPassLogin" /> Mostrar contraseña</label><!-- Ocultar/Mostrar contraseña -->
+  <button onclick="loguear()">Ingresar</button><!-- Ponemos una funcion llamada loguear() -->
+  <p class="msg" id="msg_login"></p> <!-- Indicara cuando se el usuario o la contraseña invalida-->
+  <p style="text-align:center"><span class="link" onclick="mostrarRecuperar()">¿Olvidaste tu contraseña?</span></p>
+  <!-- Ponemos una funcion para recuperar contraseña -->
+</div>
+
+<div class="card" id="recuperar" style="display:none;"><!-- Iniciamos la recuperacion de la contraseña -->
+  <h3>Recuperar contraseña</h3>
+  <!-- Creamos un input para recuperar la contraseña mediante el usuario o el telefono -->
+  <input type="text" id="recuperar_user" placeholder="Usuario o celular registrado" />
+  <button onclick="recuperar()">Recuperar</button> <!-- En el boton Ponemos la funcion para recuperar la contraseña -->
+  <p class="msg" id="msg_recuperar"></p>
+  <p style="text-align:center"><span class="link" onclick="mostrarLogin()">Volver al login</span></p><!-- Volver al Login -->
+</div>
+<script src="JS/Desafio.js"></script>
+</body>
+</html>
